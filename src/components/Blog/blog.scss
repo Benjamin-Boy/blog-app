@@ -1,9 +1,8 @@
-.blog-container{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 0.5rem;
-    box-shadow: 0 0 8px 4px #ccc;
-    border-radius: 1rem;
-    margin-top: 2rem;
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  border-right: 1px solid #ccc;
+  padding-right: 2rem;
 }

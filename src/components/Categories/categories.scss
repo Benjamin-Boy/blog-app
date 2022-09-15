@@ -1,10 +1,26 @@
-.categories-container{
-    position: sticky;
-    top: 80px;
-    height: fit-content;
-    width: 50%;
-    padding: 0.5rem 2.5rem 0 2.5rem;
-    box-shadow: 0 0 8px 4px #ccc;
-    border-radius: 1rem;
-    margin-top: 2rem;
+.categories-container {
+  position: sticky;
+  top: 130px;
+  height: fit-content;
+  width: 50%;
+  margin-top: 2rem;
+
+  h3 {
+    margin-bottom: 1.1rem;
+  }
+
+  h4 {
+    color: #70cde1;
+    font-size: 0.9rem;
+    font-weight: 400;
+
+    &:hover {
+      color: #50909e;
+      transition: 250ms ease-in-out;
+    }
+  }
+
+  li {
+    margin: 0.2rem 0;
+  }
 }

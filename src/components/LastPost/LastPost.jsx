@@ -1,17 +1,17 @@
-import "./post.scss";
+import "./lastpost.scss";
 
 const Post = () => {
   return (
-    <div className="post-container">
-      <div className="post-content">
-        <img src="https://picsum.photos/250/100" alt="random" />
-        <section className="post-infos">
+    <div className="lastpost-container">
+      <div className="lastpost-content">
+        <section className="lastpost-infos">
           <h4>Sept 25, 2022</h4>
           <a href="#">
             <h2>
-              <span>Lorem ipsum dolor sit amet.</span>
+              <span> Lorem ipsum dolor sit amet.</span>
             </h2>
           </a>
+          <img src="https://picsum.photos/300/200" alt="random" />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque id
             nisi minima repudiandae molestias est voluptates impedit, quibusdam
@@ -20,7 +20,7 @@ const Post = () => {
           </p>
         </section>
       </div>
-      <div className="post-divider"></div>
+      <div className="lastpost-divider"></div>
     </div>
   );
 };

@@ -3,16 +3,48 @@ import "./categories.scss";
 const Categories = () => {
   return (
     <div className="categories-container">
-      <h2>All categories</h2>
+      <h3>All categories</h3>
       <ul>
-        <li>Interviews</li>
-        <li>Podcast</li>
-        <li>Inspiration</li>
-        <li>Process</li>
-        <li>Meetups</li>
-        <li>Updates</li>
-        <li>Hang Time</li>
-        <li>Community</li>
+        <a href="#">
+          <li>
+            <h4>Interviews</h4>
+          </li>
+        </a>
+        <a href="#">
+          <li>
+            <h4>Podcast</h4>
+          </li>
+        </a>
+        <a href="#">
+          <li>
+            <h4>Inspiration</h4>
+          </li>
+        </a>
+        <a href="#">
+          <li>
+            <h4>Process</h4>
+          </li>
+        </a>
+        <a href="#">
+          <li>
+            <h4>Meetups</h4>
+          </li>
+        </a>
+        <a href="#">
+          <li>
+            <h4>Updates</h4>
+          </li>
+        </a>
+        <a href="#">
+          <li>
+            <h4>Hang Time</h4>
+          </li>
+        </a>
+        <a href="#">
+          <li>
+            <h4>Community</h4>
+          </li>
+        </a>
       </ul>
     </div>
   );
