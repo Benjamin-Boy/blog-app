@@ -1,0 +1,15 @@
+.post-container{
+    display: flex;
+    gap: 2.5rem;
+    padding: 0.5rem;
+    box-shadow: 0 0 4px 2px #ccc;
+    border-radius: 0.5rem;
+
+    img{
+        border-radius: 0.5rem;
+    }
+
+    button{
+        cursor: pointer;
+    }
+}
