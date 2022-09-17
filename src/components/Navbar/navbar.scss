@@ -1,0 +1,38 @@
+.top-section {
+  background-color: #fff;
+  padding: 0.8rem 0;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  .top-search {
+    margin-left: 15rem;
+    position: relative;
+
+    input {
+      width: 200px;
+      height: 35px;
+      border: 1px solid #ccc;
+      outline: none;
+      padding-left: 0.6rem;
+      border-radius: 1rem;
+    }
+
+    .search-icon {
+      font-size: 1.3rem;
+      color: #ccc;
+      position: absolute;
+      top: 7px;
+      left: 10.5rem;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 428px) {
+      margin-left: 0;
+    }
+  }
+}

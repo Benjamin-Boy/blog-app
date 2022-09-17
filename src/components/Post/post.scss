@@ -25,6 +25,15 @@
         font-weight: 400;
       }
     }
+
+    @media screen and (max-width: 428px) {
+      display: block;
+
+      img {
+        width: 405px;
+        height: 250px;
+      }
+    }
   }
 
   .post-divider {

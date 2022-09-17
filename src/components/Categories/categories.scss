@@ -1,6 +1,6 @@
 .categories-container {
   position: sticky;
-  top: 130px;
+  top: 201px;
   height: fit-content;
   width: 50%;
   margin-top: 2rem;
@@ -22,5 +22,12 @@
 
   li {
     margin: 0.2rem 0;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 810px) {
+    width: 100%;
+    margin: 0;
+    text-align: center;
   }
 }
