@@ -1,0 +1,42 @@
+[
+    {
+        "id": 0,
+        "label": "Home"
+    },
+    {
+        "id": 1,
+        "label": "Garden"
+    },
+    {
+        "id": 2,
+        "label": "Industrial"
+    },
+    {
+        "id": 3,
+        "label": "Electronics"
+    },
+    {
+        "id": 4,
+        "label": "Beauty"
+    },
+    {
+        "id": 5,
+        "label": "Beauty"
+    },
+    {
+        "id": 6,
+        "label": "Automotive"
+    },
+    {
+        "id": 7,
+        "label": "Jewelery"
+    },
+    {
+        "id": 8,
+        "label": "Sports"
+    },
+    {
+        "id": 9,
+        "label": "Health"
+    }
+]
