@@ -6,7 +6,7 @@ const Post = ({ id, date, title, description, image }) => {
   return (
     <div className="post-container">
       <div className="post-content">
-        <img src={image} alt="random" />
+        <img src={image.media} alt={image.label} />
         <section className="post-infos">
           <h4>{date}</h4>
           <Link to={`posts/${id}`}>

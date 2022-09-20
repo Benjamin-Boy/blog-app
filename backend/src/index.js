@@ -30,7 +30,6 @@ module.exports = {
       .query("api::category.category")
       .count();
     const postCount = await strapi.db.query("api::post.post").count();
-    // const userCount = await strapi.db.query("api::user.user").count();
 
     if (authorCount <= 0) {
       // Creates fake authors names
@@ -112,6 +111,9 @@ module.exports = {
           category: await strapi.db
             .query("api::category.category")
             .findOne({ where: { id: categoryRand.id } }),
+          image: await strapi.db
+            .query("api::image.image")
+            .findOne({ where: { id: 1 } }),
         };
 
         await strapi.db.query("api::post.post").create({
@@ -119,31 +121,5 @@ module.exports = {
         });
       }
     }
-
-    // Creates fake users
-    // if (userCount <= 0) {
-    //   for (let i = 0; i < postNb; i++) {
-    //     const authorRand =
-    //       authorsStrapi[Math.floor(Math.random() * authorID.length)];
-    //     const categoryRand =
-    //       categoriesStrapi[Math.floor(Math.random() * categoryId.length)];
-
-    //     const post = {
-    //       title: faker.lorem.sentence(),
-    //       author: await strapi.db
-    //         .query("api::author.author")
-    //         .findOne({ where: { id: authorRand.id } }),
-    //       description: faker.lorem.sentence(25),
-    //       text: faker.lorem.paragraphs(15),
-    //       category: await strapi.db
-    //         .query("api::category.category")
-    //         .findOne({ where: { id: categoryRand.id } }),
-    //     };
-
-    //     await strapi.db.query("api::post.post").create({
-    //       data: post,
-    //     });
-    //   }
-    // }
   },
 };

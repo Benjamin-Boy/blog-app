@@ -19,7 +19,7 @@ const SinglePost = ({ posts, filterAuthors }) => {
       <section className="single-post">
         <section className="single-post-top-section">
           <div className="single-post-op-section-image">
-            <img src={image} alt="random" />
+            <img src={image.media} alt={image.label} />
           </div>
           <div className="single-post-section-header">
             <h2>{title}</h2>

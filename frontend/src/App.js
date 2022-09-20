@@ -22,7 +22,7 @@ import "./app.scss";
 
 const App = () => {
   const { loading, error, data } = useFetch(
-    "http://localhost:1337/api/posts?populate=*"
+    "http://localhost:1337/api/posts?populate=author, category, image, image.media"
   );
 
   const [posts, setPosts] = useState(data);
@@ -46,7 +46,11 @@ const App = () => {
           label: post.attributes.category.data.attributes.label,
         },
         date: dateFormat(post.attributes.createdAt),
-        // image: post.attributes.image.data.attributes.url,
+        image: {
+          label:
+            post.attributes.image.data.attributes.media.data.attributes.name,
+          media: `http://localhost:1337${post.attributes.image.data.attributes.media.data.attributes.url}`,
+        },
       };
     });
 
@@ -85,6 +89,11 @@ const App = () => {
           label: post.attributes.category.data.attributes.label,
         },
         date: dateFormat(post.attributes.createdAt),
+        image: {
+          label:
+            post.attributes.image.data.attributes.media.data.attributes.name,
+          media: `http://localhost:1337${post.attributes.image.data.attributes.media.data.attributes.url}`,
+        },
       };
     });
 
