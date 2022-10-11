@@ -5,16 +5,6 @@ const { faker } = require("@faker-js/faker");
 const postNb = 25;
 const authorNb = 5;
 const categoryNb = 10;
-// const categories = [
-//   "Interviews",
-//   "Podcast",
-//   "Inspiration",
-//   "Process",
-//   "Meetups",
-//   "Updates",
-//   "Hang Time",
-//   "Community",
-// ];
 
 const authors = [];
 const categories = [];

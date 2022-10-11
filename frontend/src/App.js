@@ -13,6 +13,8 @@ import Home from "./pages/Home";
 import SinglePost from "./pages/SinglePost";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Error from "./pages/Error";
+import Loader from "./pages/Loader";
 
 // Import custom hooks
 import useFetch from "./hooks/useFetch";
@@ -122,8 +124,8 @@ const App = () => {
     setPosts(newPosts);
   };
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error !</p>;
+  if (loading) return <Loader />;
+  if (error) return <Error />;
 
   return (
     <div className="app-container">
@@ -162,6 +164,7 @@ const App = () => {
           </Route>
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>
     </div>
