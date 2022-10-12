@@ -32,6 +32,8 @@ const App = () => {
   const [author, setAuthor] = useState("");
   const [search, setSearch] = useState("");
 
+  console.log(data);
+
   useEffect(() => {
     const newData = data.map((post) => {
       return {
@@ -49,8 +51,6 @@ const App = () => {
         },
         date: dateFormat(post.attributes.createdAt),
         image: {
-          label:
-            post.attributes.image.data.attributes.media.data.attributes.name,
           media: `http://localhost:1337${post.attributes.image.data.attributes.media.data.attributes.url}`,
         },
       };
@@ -92,8 +92,6 @@ const App = () => {
         },
         date: dateFormat(post.attributes.createdAt),
         image: {
-          label:
-            post.attributes.image.data.attributes.media.data.attributes.name,
           media: `http://localhost:1337${post.attributes.image.data.attributes.media.data.attributes.url}`,
         },
       };

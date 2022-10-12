@@ -19,6 +19,7 @@ module.exports = {
   async bootstrap(/*{ strapi }*/) {
     const { faker } = require("@faker-js/faker");
     const postNb = 25;
+    const mediaNb = postNb;
     const authorNb = 5;
     const categoryNb = 10;
 
@@ -30,6 +31,30 @@ module.exports = {
       .query("api::category.category")
       .count();
     const postCount = await strapi.db.query("api::post.post").count();
+    const mediaCount = await strapi.db.query("api::image.image").count();
+
+    const uploads = await strapi.db.query("plugin::upload.file").findMany();
+    let uploadsId = new Set(uploads.map((upload) => upload.id));
+
+    if (mediaCount <= 0) {
+      // Create images with uploads
+      for (let i = 0; i < mediaNb + 1; i++) {
+        const randId =
+          Array.from(uploadsId)[Math.floor(Math.random() * uploadsId.length)];
+
+        await strapi.db.query("api::image.image").create({
+          data: {
+            media: randId,
+          },
+        });
+
+        uploadsId = Array.from(uploadsId).filter((id) => id !== randId);
+      }
+    }
+
+    // Creates Image ID array
+    const imagesStrapi = await strapi.db.query("api::image.image").findMany();
+    const imageId = Array.from(new Set(imagesStrapi.map((image) => image.id)));
 
     if (authorCount <= 0) {
       // Creates fake authors names
@@ -100,6 +125,8 @@ module.exports = {
           authorsStrapi[Math.floor(Math.random() * authorID.length)];
         const categoryRand =
           categoriesStrapi[Math.floor(Math.random() * categoryId.length)];
+        const imageRand =
+          imagesStrapi[Math.floor(Math.random() * imageId.length)];
 
         const post = {
           title: faker.lorem.sentence(),
@@ -113,7 +140,7 @@ module.exports = {
             .findOne({ where: { id: categoryRand.id } }),
           image: await strapi.db
             .query("api::image.image")
-            .findOne({ where: { id: 1 } }),
+            .findOne({ where: { id: imageRand.id } }),
         };
 
         await strapi.db.query("api::post.post").create({

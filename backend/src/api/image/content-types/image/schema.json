@@ -8,15 +8,10 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "label": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
     "media": {
       "type": "media",
       "multiple": false,
