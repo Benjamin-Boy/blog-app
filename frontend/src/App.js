@@ -27,6 +27,10 @@ const App = () => {
     "http://localhost:1337/api/posts?populate=author, category, image, image.media"
   );
 
+  // const { loading, error, data } = useFetch(
+  //   `${process.env.REACT_APP_BACKEND}api/posts?populate=author, category, image, image.media`
+  // );
+
   const [posts, setPosts] = useState(data);
   const [category, setCategory] = useState("");
   const [author, setAuthor] = useState("");
