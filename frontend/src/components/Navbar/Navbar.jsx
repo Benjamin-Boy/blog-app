@@ -7,7 +7,7 @@ const Navbar = ({ search, resetFiltering, searchPosts, handleSearch }) => {
   return (
     <>
       <section className="top-section">
-        <Link to="/blog" onClick={resetFiltering}>
+        <Link to="/" onClick={resetFiltering}>
           <h1>Blog</h1>
         </Link>
         <div className="top-search">

@@ -8,7 +8,7 @@ const Error = () => {
     <div className="error-container">
       <h1>404</h1>
       <p>Oops, nothing to read over here</p>
-      <Link to="/blog">
+      <Link to="/">
         <button>Go back home</button>
       </Link>
     </div>

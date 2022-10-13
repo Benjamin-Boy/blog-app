@@ -134,7 +134,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/blog"
+            path="/"
             element={
               <SharedLayout
                 resetFiltering={resetFiltering}
